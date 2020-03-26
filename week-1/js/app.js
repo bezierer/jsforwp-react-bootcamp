@@ -1,58 +1,62 @@
 /**
- * React for my One Page Website
+ * Renders the content & markup for the one-page website.
  */
 
-const siteTitle = <h1 className="site-title">React Bootcamp Week 1 Homework</h1>;
-const introContent = <h2>Hello React</h2>;
-const footerContent = <p>2020 React Bootcamp | Cameron Campbell</p>;
+const el = React.createElement;
+const pEl = el('p', {}, '2020 JS for WP React Bootcamp | Cameron Campbell');
+const siteTitle = el('h1', {}, 'React Bootcamp Week 1 Homework');
+const introContent = el('h2', {}, 'Hello React');
 
-// Basic styling options.
-const blueStyle = {
-	backgroundColor: '#0070d9'
-};
-const contentStyle = {
-	backgroundColor: '#F5F7FD'
-};
-
-
-// Create Header Component
+// Create Header Component.
 function Header() {
-	return (
-		<header className='header' style={blueStyle}>
-			{siteTitle}
-		</header>
+	return el(
+		'header',
+		{
+			id: 'site-header',
+			style: {
+				backgroundColor: '#fff'
+			}
+		},
+		siteTitle
 	);
 }
 
-// Create Main Content Component
+// Create Header Component.
 function MainContent() {
-	return (
-		<main className='main' style={contentStyle}>
-			{introContent}
-		</main>
+	return el(
+		'main',
+		{
+			id: 'main',
+			style: {
+				backgroundColor: '#f5f7fd',
+				height: '60vh'
+			}
+		},
+		introContent
 	);
 }
 
-// Create Footer Component
+// Create Footer Component.
 function Footer() {
-	return (
-		<footer className='footer' style={blueStyle}>
-			{footerContent}
-		</footer>
+	return el(
+		'footer',
+		{
+			className: 'site-footer',
+			style: {
+				backgroundColor: '#0070d9'
+			}
+		},
+		pEl
 	);
 }
 
-// Return a Fragment with all my components.
-const App = () => (
-	<React.Fragment>
-		<Header />
-		<MainContent />
-		<Footer />
-	</React.Fragment>
-);
+// Combine all our components into the React Fragment.
+function App() {
+	return el(React.Fragment, {}, Header(), MainContent(), Footer());
+}
 
 ReactDOM.render(
-	// Render App Components
-	<App />,
+	// Call App() to render our markup.
+	App(),
 	document.getElementById('root')
 );
