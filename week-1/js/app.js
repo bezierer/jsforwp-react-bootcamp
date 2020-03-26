@@ -4,20 +4,63 @@
 
 const el = React.createElement;
 const pEl = el('p', {}, '2020 JS for WP React Bootcamp | Cameron Campbell');
-const siteTitle = el('h1', {}, 'React Bootcamp Week 1 Homework');
-const introContent = el('h2', {}, 'Hello React');
+const siteTitle = el('h1', {}, 'Hello React');
+const introContent = el('h2', {}, 'React Bootcamp Week 1 Homework');
+const row = el('div', { className: 'row' }, null);
 
-// Create Header Component.
+// Create our Header component.
 function Header() {
 	return el(
 		'header',
 		{
-			id: 'site-header',
-			style: {
-				backgroundColor: '#fff'
-			}
+			className: 'site-header'
 		},
-		siteTitle
+		el(
+			'div',
+			{
+				class: 'row'
+			},
+			siteTitle,
+			el(
+				'ul',
+				{
+					class: 'nav'
+				},
+				el(
+					'li',
+					null,
+					el(
+						'a',
+						{
+							href: '#'
+						},
+						'Home'
+					)
+				),
+				el(
+					'li',
+					null,
+					el(
+						'a',
+						{
+							href: '#'
+						},
+						'About'
+					)
+				),
+				el(
+					'li',
+					null,
+					el(
+						'a',
+						{
+							href: '#'
+						},
+						'Contact'
+					)
+				)
+			)
+		)
 	);
 }
 
@@ -29,10 +72,16 @@ function MainContent() {
 			id: 'main',
 			style: {
 				backgroundColor: '#f5f7fd',
-				height: '60vh'
+				height: '66vh'
 			}
 		},
-		introContent
+		el(
+			'div',
+			{
+				class: 'row'
+			},
+			introContent
+		)
 	);
 }
 
