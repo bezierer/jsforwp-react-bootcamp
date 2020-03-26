@@ -1,6 +1,5 @@
 <h3>Cameron Campbell's React Bootcamp Homework</h4>
 <br>
-<br>
 <h4>What's in here?</h4>
 
 - ⚡️ React Homework of course!
