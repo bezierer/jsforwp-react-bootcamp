@@ -1,0 +1,36 @@
+/*******************************
+		Main App Styles
+ *******************************/
+
+ * {
+	 font-family: Arial, Helvetica, sans-serif;
+	 color: #111;
+	 font-size: 20px;
+	 margin: 0;
+	 padding: 0;
+ }
+
+ #site-header {
+	padding: 40px 0;
+ }
+
+#site-header h1 {
+	margin-left: 40px;
+}
+
+#main {
+	padding: 30px 0;
+}
+
+#main h2 {
+	margin-left: 40px;
+}
+
+.site-footer {
+	padding: 40px 0;
+ }
+
+.site-footer p {
+	color: #fff;
+	 margin-left: 40px;
+ }
