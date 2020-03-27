@@ -12,10 +12,10 @@ const siteTitle = el('h1', {}, 'Hello React');
 const introContent = el('h2', {}, 'React Bootcamp Week 1 Homework');
 
 /*********************************************
-	Create our Header component.
+Create our Header component.
 
-	Question: Did I go overboard on indtenting
-	trying to make this _more_ readable?
+Question: Did I go overboard on indtenting
+trying to make this _more_ readable?
 **********************************************/
 function Header() {
 	return el(
